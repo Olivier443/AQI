@@ -7,7 +7,7 @@ This RESTful api is being developped to enable anybody to fetch weather and qual
 Creating a user account is optional. However, it is giving the possibility to the user to save and edit the data he decided to save (to be further developed).
 
 ## Encryption - bcrypt
-To be added to the authentication process.
+bcrypt has been chosend to hash the passwords.
 
 ## Database - mongoDB
 https://www.mongodb.com/
@@ -47,6 +47,7 @@ express": "^4.18.2
 mongodb": "^6.3.0
 morgan": "^1.10.0
 nodemon": "^3.0.3
+bcrypt": "^5.1.1
 
 # Other
 Developer notes have been added through the components.
