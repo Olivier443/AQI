@@ -4,7 +4,6 @@ const signinAccount = async (req, res) => {
   const bcrypt = require('bcrypt');
 
   const { MONGO_URI } = process.env;
-  console.log(`MONGO_URI = ${MONGO_URI}`);
 
   const options = {
     // useNewUrlParser: true,

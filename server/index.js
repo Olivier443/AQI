@@ -6,6 +6,7 @@ const { signupAccount } = require('./handlers/signupAccount');
 const { signinAccount } = require('./handlers/signinAccount');
 const { recMyWeather } = require('./handlers/recMyWeather');
 const { weatherReport } = require('./handlers/weatherReport');
+const { delWeather } = require('./handlers/delWeather');
 
 const PORT = 4000;
 
@@ -38,5 +39,8 @@ express()
 
   // User saves his weather data in his account
   .get("/weather/report/:currentUser", weatherReport)
+
+  // User deletes his weather data in his account
+  .delete("/weather/report/del/:weatherDataId", delWeather)
 
   .listen(PORT, () => console.info(`Listening on port ${PORT}`));

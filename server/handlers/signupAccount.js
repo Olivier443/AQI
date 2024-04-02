@@ -4,7 +4,6 @@ const signupAccount = async (req, res) => {
   const bcrypt = require('bcrypt');
 
   const { MONGO_URI } = process.env;
-  console.log(`MONGO_URI = ${MONGO_URI}`);
 
   const options = {
     // useNewUrlParser: true,
@@ -28,10 +27,8 @@ const signupAccount = async (req, res) => {
       return new Promise(function (resolve, reject) {
         bcrypt.hash(password, 12, function (err, hash) {
           if (err) {
-            console.log(`?`, 'I am here');
             reject(err);
           } else {
-            console.log(`???`, 'I am actually here', hash); // true
             resolve(hash);
           }
         });
